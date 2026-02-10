@@ -1,7 +1,10 @@
 /* Aqua Whimsy */
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 65px; 
+}
+
+section[id] {
+    scroll-margin-top: 100px;
 }
 
 :root {
@@ -24,6 +27,25 @@ body {
 }
 
 /* Navbar */
+.nav-menu-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+}
+
+/* Điều chỉnh khoảng cách Navbar trên điện thoại */
+@media (max-width: 768px) {
+    .container-custom {
+        padding: 0 15px;
+    }
+    
+    .nav-sticky .container-custom {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
 .nav-sticky {
     position: sticky;
     top: 0;
@@ -39,7 +61,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(19, 80, 91, 0.7);
+    background-color: rgba(19, 80, 91, 0.5);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
