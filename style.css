@@ -1,0 +1,92 @@
+/* Aqua Whimsy */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 65px; 
+}
+
+:root {
+    --aqua-primary: #008080;
+    --aqua-light: #00a8a8;
+    --text-white: #ffffff;
+}
+
+body {
+    background-color: var(--aqua-primary);
+    color: var(--text-white);
+    font-family: 'Inter', sans-serif;
+}
+
+
+.container-custom {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.nav-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-sticky::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(19, 80, 91, 0.7);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: -1;
+}
+
+.nav-sticky .container-custom {
+    position: relative;
+    z-index: 1; 
+}
+
+
+/* Hiệu ứng Timeline */
+.timeline-line::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Hiệu ứng Zoom khi hover vào Experience Card */
+.card-zoom {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card-zoom:hover {
+    transform: scale(1.02);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Tùy chỉnh thanh cuộn (Scrollbar) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--aqua-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
